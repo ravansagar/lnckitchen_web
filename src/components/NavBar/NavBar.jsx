@@ -617,19 +617,6 @@ const NavBar = () => {
                                         />
                                     )}
                                 </IconButton>
-                                <IconButton
-                                    edge="end"
-                                    color="inherit"
-                                    aria-label="cart"
-                                    sx={{ marginLeft: 2, marginRight: 0.5 }}
-                                >
-                                    <ShoppingCartIcon
-                                        style={{
-                                            height: "32px",
-                                            width: "32px",
-                                        }}
-                                    />
-                                </IconButton>
                             </div>
                         </div>
                     ) : (
@@ -725,10 +712,10 @@ const NavBar = () => {
                                             navigate("/profile");
                                         }}
                                     >
-                                        {user.photoURL || user.avatar ? (
+                                        {user.avatar || user.photoURL  ? (
                                             <Avatar
                                                 src={
-                                                    user.photoURL || user.avatar
+                                                    user.avatar || user.photoURL
                                                 }
                                                 alt="User"
                                                 sx={{
