@@ -1,0 +1,26 @@
+:root {
+  --color : #fff;
+  --colordark: #000;
+}
+
+.navbar.light {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+  
+  .navbar.dark {
+    background-color: black;
+    color: white;
+  }
+  .navbar .active {
+    color: white;
+  }
+
+  .navbar.dark a.active {
+    color: var(--colordark);
+  }
+  
+  .navbar.light a.active {
+    color: var(--color);
+  }
+  

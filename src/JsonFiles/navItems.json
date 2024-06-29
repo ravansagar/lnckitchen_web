@@ -1,0 +1,7 @@
+[
+  { "label": "Home", "icon": "HomeIcon", "path": "/" },
+  { "label": "Menus", "icon": "MenuIcon", "path": "/menus" },
+  { "label": "Times", "icon": "ScheduleIcon", "path": "/times" }
+]
+
+  

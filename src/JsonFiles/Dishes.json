@@ -1,0 +1,632 @@
+{
+    "rice_fried" : {
+        "image": "./images/manchurian.jpeg",
+        "items": [
+        {
+            "label": "Jeera Rice",
+            "id"  : 0,
+            "image": "./images/manchurian.jpeg",
+            "description": "Aromatic basmati rice flavored with cumin seeds, offering a subtle, earthy taste that complements any main dish.",
+            "price": "Rs. 100"
+        },
+        {
+            "label": "Veg Fried Rice",
+            "image": "",
+            "id"  : 0,
+            "description": "Stir-fried rice with mixed vegetables, soy sauce, and spices, creating a deliciously savory and satisfying dish.",
+            "price": "Rs. 120"
+        },
+        {
+            "label": "Butter Garlic Fried Rice",
+            "image": "",
+            "id"  : 0,
+            "description": "Rich fried rice infused with the flavors of butter and garlic, making it a decadent and aromatic side.",
+            "price": "Rs. 270"
+        },
+        {
+            "label": "Chicken Fried Rice",
+            "image": "",
+            "id"  : 1,
+            "description": "Savory fried rice with tender chicken pieces, vegetables, and seasonings, offering a delightful blend of flavors.",
+            "price": "Rs. 170"
+        },
+        {
+            "label": "Singapore Chicken Fried Rice",
+            "image": "",
+            "id"  : 1,
+            "description": "Spicy fried rice with chicken, featuring bold flavors and a hint of sweetness, inspired by Singaporean cuisine.",
+            "price": "Rs. 350"
+        },
+        {
+            "label": "Chicken Garlic Fried Rice",
+            "image": "",
+            "id"  : 1,
+            "description": "Garlic-infused fried rice with a blend of savory spices, providing a rich and aromatic flavor experience.",
+            "price": "Rs. 310"
+        },
+        {
+            "label": "Singapore Fried Rice",
+            "image": "",
+            "id"  : 0,
+            "description": "Spicy and flavorful fried rice with a mix of vegetables and exotic spices, inspired by Singaporean street food.",
+            "price": "Rs. 320"
+        }
+    ]},
+
+    "Biryani" : {
+        "image": "./images/manchurian.jpeg",
+        "items":  [
+        {
+            "label": "Veg Biryani",
+            "image": "",
+            "description": "Aromatic basmati rice cooked with mixed vegetables and a blend of traditional spices, offering a flavorful and fragrant dish.",
+            "price": "Rs. 170"
+        },
+        {
+            "label": "Chicken Biryani",
+            "image": "",
+            "description": "Spiced basmati rice layered with tender chicken pieces, cooked to perfection with aromatic spices and herbs.",
+            "price": "Rs. 220"
+        },
+        {
+            "label": "Mutton Biryani",
+            "image": "",
+            "description": "Rich and flavorful biryani with succulent mutton pieces, cooked with basmati rice and traditional spices.",
+            "price": "Rs. 450"
+        }
+    ]},
+    "Roti": {
+        "image": "./assets/images/manchurian.jpeg",
+        "items": [
+        {
+            "label": "Plain Roti",
+            "image": "",
+            "description": "Soft and fluffy whole wheat flatbread, a staple accompaniment for any curry or side dish.",
+            "price": "Rs. 20"
+        },
+        {
+            "label": "Butter Roti",
+            "image": "",
+            "description": "Whole wheat roti brushed with butter for a rich flavor, perfect with any curry.",
+            "price": "Rs. 30"
+        },
+        {
+            "label": "Lachha Paratha",
+            "image": "",
+            "description": "Layered and crispy whole wheat paratha, ideal for soaking up flavorful gravies.",
+            "price": "Rs. 40"
+        }
+    ]},
+    "Add Ons":  {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "Raita",
+            "image": "",
+            "description": "Cooling yogurt-based side dish with spices and vegetables, perfect for balancing spicy foods.",
+            "price": "Rs. 50"
+        },
+        {
+            "label": "Salad (Salsa)",
+            "image": "",
+            "description": "Fresh salad with a tangy salsa dressing, offering a refreshing crunch.",
+            "price": "Rs. 80"
+        },
+        {
+            "label": "Papad",
+            "image": "",
+            "description": "Crispy lentil wafer, a perfect crunchy accompaniment to meals.",
+            "price": "Rs. 20"
+        },
+        {
+            "label": "Masala Papad",
+            "image": "",
+            "description": "Spiced crispy lentil wafer, adding a flavorful crunch to any meal.",
+            "price": "Rs. 30"
+        }
+    ]},
+    "Curry (Veg)": {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "Dal Fry",
+            "image": "",
+            "description": "Tempered yellow lentils with spices, a hearty and comforting dish that pairs well with rice or bread.",
+            "price": "Rs. 125"
+        },
+        {
+            "label": "Dal Tadka",
+            "image": "",
+            "description": "Yellow lentils cooked with a spicy tempering, offering a rich and flavorful experience.",
+            "price": "Rs. 150"
+        },
+        {
+            "label": "Dal Makhni",
+            "image": "",
+            "description": "Creamy black lentils cooked with butter and spices, a rich and indulgent Punjabi classic.",
+            "price": "Rs. 230"
+        },
+        {
+            "label": "Mix Veg Curry",
+            "image": "",
+            "description": "A medley of vegetables cooked in a spicy curry sauce, providing a balanced and nutritious meal.",
+            "price": "Rs. 200"
+        },
+        {
+            "label": "Paneer Masala",
+            "image": "",
+            "description": "Paneer cubes in a spicy tomato-based gravy, a delightful vegetarian dish.",
+            "price": "Rs. 320"
+        },
+        {
+            "label": "Paneer Butter Masala",
+            "image": "",
+            "description": "Paneer in a creamy and buttery tomato gravy, rich and flavorful.",
+            "price": "Rs. 350"
+        },
+        {
+            "label": "Paneer Lababdar",
+            "image": "",
+            "description": "Paneer cooked in a rich and creamy tomato sauce with spices, an indulgent delight.",
+            "price": "Rs. 450"
+        },
+        {
+            "label": "Sweet & Sour",
+            "image": "",
+            "description": "A delightful mix of sweet and tangy flavors in a rich sauce, perfect for a unique taste.",
+            "price": "Rs. 270"
+        },
+        {
+            "label": "American Chopsuey",
+            "image": "",
+            "description": "Crispy noodles topped with a sweet and tangy vegetable sauce, a fusion dish.",
+            "price": "Rs. 200"
+        }
+    ]},
+    "Curry (Non-Veg)": {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "Chicken Curry",
+            "image": "",
+            "description": "Tender chicken pieces cooked in a spiced gravy, a classic and hearty dish.",
+            "price": "Rs. 220"
+        },
+        {
+            "label": "Butter Chicken Masala",
+            "image": "",
+            "description": "Juicy chicken pieces in a rich, creamy tomato-based gravy, a favorite Indian dish.",
+            "price": "Rs. 300"
+        },
+        {
+            "label": "Chicken Keema Curry",
+            "image": "",
+            "description": "Minced chicken cooked with peas and spices, a flavorful and hearty dish.",
+            "price": "Rs. 240"
+        },
+        {
+            "label": "Sweet Sour Chicken",
+            "image": "",
+            "description": "Chicken pieces in a sweet and tangy sauce, offering a delightful flavor combination.",
+            "price": "Rs. 290"
+        },
+        {
+            "label": "Chicken Banjara",
+            "image": "",
+            "description": "Spicy chicken curry with bold flavors, a traditional favorite.",
+            "price": "Rs. 340"
+        },
+        {
+            "label": "Chicken Bhatinda",
+            "image": "",
+            "description": "Hearty chicken curry with a blend of robust spices, a savory delight.",
+            "price": "Rs. 350"
+        },
+        {
+            "label": "Chicken Tikka Masala",
+            "image": "",
+            "description": "Grilled chicken pieces in a creamy and spicy tomato gravy, a classic dish.",
+            "price": "Rs. 350"
+        },
+        {
+            "label": "Chicken American Chopsuey",
+            "image": "",
+            "description": "Crispy noodles topped with a savory chicken and vegetable sauce, a fusion favorite.",
+            "price": "Rs. 340"
+        },
+        {
+            "label": "Chicken Kadhai",
+            "image": "",
+            "description": "Chicken pieces cooked with bell peppers and onions in a spicy gravy, full of flavor.",
+            "price": "Rs. 240"
+        }
+    ]},
+    "Special Curry": {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "Thai Red Veg",
+            "image": "",
+            "description": "Vegetables cooked in a fragrant and spicy Thai red curry sauce, rich in flavor.",
+            "price": "Rs. 350"
+        },
+        {
+            "label": "Thai Red Chicken",
+            "image": "",
+            "description": "Chicken cooked in a flavorful and spicy Thai red curry sauce, aromatic and delicious.",
+            "price": "Rs. 400"
+        },
+        {
+            "label": "Mutton Keema Curry",
+            "image": "",
+            "description": "Minced mutton cooked with peas and spices, a rich and hearty dish full of flavor.",
+            "price": "Rs. 450"
+        }
+    ]},
+    "Veg-starter" : {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "Manchurian",
+            "image": "./images/manchurian.jpeg",
+            "description": "Deep-fried ingredients in a flavorful soy sauce-based sauce, a popular Indo-Chinese dish.",
+            "price": "Rs. 170"
+        },
+        {
+            "label": "Chilli Paneer",
+            "image": "./images/chilliPaneer.jpeg",
+            "description": "Crispy paneer cubes in a vibrant sauce with sweet, spicy, and tangy flavors.",
+            "price": "Rs. 270"
+        },
+        {
+            "label": "Chowmein",
+            "image": "./images/chowmein.jpeg",
+            "description": "Springy noodles stir-fried with crisp veggies and savory protein, a satisfying Chinese-American classic.",
+            "price": "Rs. 130"
+        },
+        {
+            "label": "Jaipuri Tikki",
+            "image": "jaiTikki.jpg",
+            "description": "Crispy potato patties bursting with spices, a must-try street food from Jaipur.",
+            "price": "Rs. 340"
+        },
+        {
+            "label": "Aaloo Tikki",
+            "image": "chowmein.jpg",
+            "description": "Mashed potatoes mixed with spices, shaped into patties, and shallow-fried until golden brown and crispy.",
+            "price": "Rs. 130"
+        },
+        {
+            "label": "Cheese Corn Tikki",
+            "image": "",
+            "description": "Mashed potatoes, sweet corn, and cheese, pan-fried until crispy outside and gooey inside.",
+            "price": "Rs. 270"
+        },
+        {
+            "label": "Schezwan Paneer",
+            "image": "",
+            "description": "Crispy paneer cubes in a spicy, tangy Schezwan sauce, a vegetarian delight.",
+            "price": "Rs. 270"
+        },
+        {
+            "label": "Peanut Sadeko",
+            "image": "",
+            "description": "A spicy, tangy Nepali salad with roasted peanuts and chopped vegetables.",
+            "price": "Rs. 80"
+        },
+        {
+            "label": "Bhatmaas Sadeko",
+            "image": "",
+            "description": "Roasted soybeans with spices and fresh ingredients, a tangy, spicy Nepali snack.",
+            "price": "Rs. 100"
+        },
+        {
+            "label": "Mustang Aloo",
+            "image": "",
+            "description": "Crispy potato wedges in a fiery blend of spices, a popular snack from Nepal.",
+            "price": "Rs. 125"
+        },
+        {
+            "label": "Aloo Jeera",
+            "image": "",
+            "description": "Potatoes cooked with cumin seeds and spices, a simple yet delicious Indian side dish.",
+            "price": "Rs. 70"
+        },
+        {
+            "label": "French Fries",
+            "image": "",
+            "description": "Deep-fried potato strips, crispy outside, fluffy inside, served with dipping sauces.",
+            "price": "Rs. 100"
+        },
+        {
+            "label": "Peri Peri Fries",
+            "image": "",
+            "description": "French fries coated in spicy, tangy Peri Peri seasoning, an addictive snack.",
+            "price": "Rs. 130"
+        },
+        {
+            "label": "Shanghai Paneer",
+            "image": "",
+            "description": "Crispy paneer in a spicy, tangy sauce with vegetables, a bold and satisfying appetizer.",
+            "price": "Rs. 350"
+        }
+    ]},
+    "Non-Veg-Starter" : {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "Chicken Manchurian",
+            "image": "",
+            "description": "Crispy fried chicken in a sweet and spicy sauce, versatile and delicious.",
+            "price": "Rs. 290"
+        },
+        {
+            "label": "Chicken Chilly (Boneless)",
+            "image": "",
+            "description": "Bite-sized boneless chicken in a spicy, flavorful sauce, perfect with noodles or fried rice.",
+            "price": "Rs. 270"
+        },
+        {
+            "label": "Chicken Sadeko",
+            "image": "",
+            "description": "Grilled chicken marinated in spices and citrus juices, mixed with onions and tomatoes, a refreshing Nepali dish.",
+            "price": "Rs. 250"
+        },
+        {
+            "label": "Chicken Roast",
+            "image": "",
+            "description": "Juicy and tender chicken roasted with a blend of aromatic spices, perfect for any occasion.",
+            "price": "Rs. 270"
+        },
+        {
+            "label": "Schezwan Chicken",
+            "image": "",
+            "description": "Spicy chicken cooked in a Schezwan sauce, delivering bold and fiery flavors.",
+            "price": "Rs. 190"
+        },
+        {
+            "label": "Shanghai Chicken",
+            "image": "",
+            "description": "Crispy chicken pieces tossed in a tangy and savory Shanghai-style sauce.",
+            "price": "Rs. 320"
+        },
+        {
+            "label": "Special Chicken",
+            "image": "",
+            "description": "A unique blend of spices and herbs, making this chicken dish truly special.",
+            "price": "Rs. 210"
+        },
+        {
+            "label": "Chicken Chowmein",
+            "image": "",
+            "description": "Stir-fried noodles with chicken, vegetables, and a savory sauce, a classic Chinese favorite.",
+            "price": "Rs. 180"
+        },
+        {
+            "label": "Chicken Pop Corn",
+            "image": "",
+            "description": "Bite-sized, crispy chicken pieces, perfect for snacking or as an appetizer.",
+            "price": "Rs. 340"
+        },
+        {
+            "label": "Tawa Chicken",
+            "image": "",
+            "description": "Chicken cooked on a griddle with spices, delivering a rich and flavorful taste.",
+            "price": "Rs. 340"
+        },
+        {
+            "label": "Crispy Chicken",
+            "image": "",
+            "description": "Chicken pieces fried to a golden crisp, offering a delightful crunch with every bite.",
+            "price": "Rs. 380"
+        },
+        {
+            "label": "Special Mutton",
+            "image": "",
+            "description": "Tender mutton cooked with a special blend of spices, making it a savory treat.",
+            "price": "Rs. 480"
+        },
+        {
+            "label": "Sausage Fried",
+            "image": "",
+            "description": "Sausages fried to perfection, a simple yet satisfying dish.",
+            "price": "Rs. 200"
+        },
+        {
+            "label": "Chicken Nuggets",
+            "image": "",
+            "description": "Crispy and golden chicken nuggets, perfect for dipping and snacking.",
+            "price": "Rs. 300"
+        }
+    ]},
+    "Pasta": {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "White Sauce (veg) Pasta",
+            "image": "",
+            "description": "Creamy pasta with white sauce, mixed vegetables, and herbs, a comforting vegetarian delight.",
+            "price": "Rs. 260"
+        },
+        {
+            "label": "Red Sauce (veg) Pasta",
+            "image": "",
+            "description": "Tangy pasta with red sauce, assorted veggies, and aromatic spices, a flavorful vegetarian option.",
+            "price": "Rs. 320"
+        },
+        {
+            "label": "White Sauce (chicken) Pasta",
+            "image": "",
+            "description": "Creamy pasta with white sauce, tender chicken pieces, and savory seasonings, a fulfilling meal.",
+            "price": "Rs. 300"
+        },
+        {
+            "label": "Red Sauce (chicken) Pasta",
+            "image": "",
+            "description": "Tangy pasta with red sauce, succulent chicken, and Italian herbs, a hearty chicken lover's choice.",
+            "price": "Rs. 360"
+        }
+    ]},
+    "Egg": {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "Egg Bhurji",
+            "image": "",
+            "description": "Scrambled eggs cooked with onions, tomatoes, and spices, a flavorful Indian egg dish.",
+            "price": "Rs. 80"
+        },
+        {
+            "label": "Egg Chilli",
+            "image": "",
+            "description": "Stir-fried eggs tossed with onions, bell peppers, and spicy sauces, a zesty egg preparation.",
+            "price": "Rs. 100"
+        },
+        {
+            "label": "Plain Omelet",
+            "image": "",
+            "description": "Classic omelet made with eggs, seasoned and cooked to perfection, a simple yet satisfying dish.",
+            "price": "Rs. 100"
+        },
+        {
+            "label": "Masala Omelet",
+            "image": "",
+            "description": "Spiced omelet filled with onions, tomatoes, and green chilies, a flavorful twist on a breakfast favorite.",
+            "price": "Rs. 120"
+        },
+        {
+            "label": "Egg Boiled",
+            "image": "",
+            "description": "Hard-boiled egg, a protein-packed snack or addition to any meal.",
+            "price": "Rs. 25"
+        }
+    ]},
+    "Chatpate": {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "Chatpate",
+            "image": "",
+            "description": "Spicy and tangy snack mix, a popular street food bursting with flavor.",
+            "price": "Rs. 60"
+        },
+        {
+            "label": "Egg Chatpate",
+            "image": "",
+            "description": "Chatpate with boiled eggs, tossed in spices, a delightful twist on a classic.",
+            "price": "Rs. 100"
+        },
+        {
+            "label": "Wai Wai Sadeko",
+            "image": "",
+            "description": "Savory Nepali snack made with Wai Wai noodles, mixed with spices and herbs, a crunchy delight.",
+            "price": "Rs. 80"
+        }
+    ]},
+    "Desserts": {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "Rasgulla",
+            "image": "",
+            "description": "Soft and spongy Indian sweet made from paneer, soaked in sugar syrup, a traditional delight.",
+            "price": "Rs. 30"
+        },
+        {
+            "label": "Lalmohan",
+            "image": "",
+            "description": "Bengali sweet made from khoya, fried and soaked in sugar syrup, a decadent treat.",
+            "price": "Rs. 35"
+        },
+        {
+            "label": "Dahi",
+            "image": "",
+            "description": "Creamy and chilled yogurt, lightly sweetened and flavored with cardamom, a refreshing dessert.",
+            "price": "Rs. 35"
+        }
+    ]},
+    "Momo-veg": {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "Steam Momo",
+            "image": "",
+            "description": "Soft dumplings filled with vegetables, steamed to perfection, served with spicy dipping sauce.",
+            "price": "Rs. 100"
+        },
+        {
+            "label": "Kothey Momo",
+            "image": "",
+            "description": "Pan-fried momo with a crispy bottom, stuffed with veggies, a delightful Tibetan specialty.",
+            "price": "Rs. 130"
+        },
+        {
+            "label": "Fried Momo",
+            "image": "",
+            "description": "Crispy fried momo filled with vegetables, served with tangy sauce, a crunchy delight.",
+            "price": "Rs. 150"
+        },
+        {
+            "label": "Jhoi Momo",
+            "image": "",
+            "description": "Spicy momo filled with veggies, cooked in a flavorful broth, a fiery treat for the taste buds.",
+            "price": "Rs. 200"
+        }
+    ]},
+    "Momo-non-veg": {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "Steam Momo",
+            "image": "",
+            "description": "Soft dumplings filled with chicken, steamed to perfection, served with spicy dipping sauce.",
+            "price": "Rs. 150"
+        },
+        {
+            "label": "Kothey Momo",
+            "image": "",
+            "description": "Pan-fried momo with a crispy bottom, stuffed with chicken, a delightful Tibetan specialty.",
+            "price": "Rs. 180"
+        },
+        {
+            "label": "Fried Momo",
+            "image": "",
+            "description": "Crispy fried momo filled with chicken, served with tangy sauce, a crunchy delight.",
+            "price": "Rs. 200"
+        },
+        {
+            "label": "Jhoi Momo",
+            "image": "",
+            "description": "Spicy momo filled with chicken, cooked in a flavorful broth, a fiery treat for the taste buds.",
+            "price": "Rs. 220"
+        }
+    ]},
+    "Refreshment": {
+        "image": "./assets/images/manchurian.jpeg",
+        "items":[
+        {
+            "label": "Hookah",
+            "image": "",
+            "description": "Traditional water pipe used for smoking flavored tobacco, a relaxing social activity.",
+            "price": "Rs. 350"
+        },
+        {
+            "label": "Coke/Fanta/Sprite",
+            "image": "",
+            "description": "Carbonated soft drinks available in various flavors, a refreshing beverage choice.",
+            "price": "Rs. 60/100"
+        },
+        {
+            "label": "Lemonade",
+            "image": "",
+            "description": "Refreshing drink made from lemon juice, water, and sugar, a perfect thirst quencher.",
+            "price": "Rs. 100"
+        },      
+        {
+            "label" : "Coffee",
+            "image" : "",
+            "description": "Hot brewed beverage made from coffee beans, served with milk and sugar, a morning staple.",
+            "price" : "Rs. 100"
+        }
+    ]}
+}

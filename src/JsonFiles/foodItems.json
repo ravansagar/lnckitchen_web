@@ -1,0 +1,104 @@
+[
+    {
+        "label": "Manchurian",
+        "image": "./images/manchurian.jpeg",
+        "description": "Deep-fried ingredients in a flavorful soy sauce-based sauce, a popular Indo-Chinese dish.",
+        "price": "Rs. 170"
+    },
+    {
+        "label": "Chilli Paneer",
+        "image": "images/chilliPaneer.jpeg",
+        "description": "Crispy paneer cubes in a vibrant sauce with sweet, spicy, and tangy flavors.",
+        "price": "Rs. 270"
+    },
+    {
+        "label": "Chowmein",
+        "image": "images/chowmein.jpeg",
+        "description": "Springy noodles stir-fried with crisp veggies and savory protein, a satisfying Chinese-American classic.",
+        "price": "Rs. 130"
+    },
+    {
+        "label": "Jaipuri Tikki",
+        "image": "jaiTikki.jpg",
+        "description": "Crispy potato patties bursting with spices, a must-try street food from Jaipur.",
+        "price": "Rs. 340"
+    },
+    {
+        "label": "Aaloo Tikki",
+        "image": "chowmein.jpg",
+        "description": "Mashed potatoes mixed with spices, shaped into patties, and shallow-fried until golden brown and crispy.",
+        "price": "Rs. 130"
+    },
+    {
+        "label": "Cheese Corn Tikki",
+        "image": "",
+        "description": "Mashed potatoes, sweet corn, and cheese, pan-fried until crispy outside and gooey inside.",
+        "price": "Rs. 270"
+    },
+    {
+        "label": "Schezwan Paneer",
+        "image": "",
+        "description": "Crispy paneer cubes in a spicy, tangy Schezwan sauce, a vegetarian delight.",
+        "price": "Rs. 270"
+    },
+    {
+        "label": "Peanut Sadeko",
+        "image": "",
+        "description": "A spicy, tangy Nepali salad with roasted peanuts and chopped vegetables.",
+        "price": "Rs. 80"
+    },
+    {
+        "label": "Bhatmaas Sadeko",
+        "image": "",
+        "description": "Roasted soybeans with spices and fresh ingredients, a tangy, spicy Nepali snack.",
+        "price": "Rs. 100"
+    },
+    {
+        "label": "Mustang Aloo",
+        "image": "",
+        "description": "Crispy potato wedges in a fiery blend of spices, a popular snack from Nepal.",
+        "price": "Rs. 125"
+    },
+    {
+        "label": "Aloo Jeera",
+        "image": "",
+        "description": "Potatoes cooked with cumin seeds and spices, a simple yet delicious Indian side dish.",
+        "price": "Rs. 70"
+    },
+    {
+        "label": "French Fries",
+        "image": "",
+        "description": "Deep-fried potato strips, crispy outside, fluffy inside, served with dipping sauces.",
+        "price": "Rs. 100"
+    },
+    {
+        "label": "Peri Peri Fries",
+        "image": "",
+        "description": "French fries coated in spicy, tangy Peri Peri seasoning, an addictive snack.",
+        "price": "Rs. 130"
+    },
+    {
+        "label": "Shanghai Paneer",
+        "image": "",
+        "description": "Crispy paneer in a spicy, tangy sauce with vegetables, a bold and satisfying appetizer.",
+        "price": "Rs. 350"
+    },
+    {
+        "label": "Chicken Manchurian",
+        "image": "",
+        "description": "Crispy fried chicken in a sweet and spicy sauce, versatile and delicious.",
+        "price": "Rs. 290"
+    },
+    {
+        "label": "Chicken Chilly (Boneless)",
+        "image": "",
+        "description": "Bite-sized boneless chicken in a spicy, flavorful sauce, perfect with noodles or fried rice.",
+        "price": "Rs. 270"
+    },
+    {
+        "label": "Chicken Sadeko",
+        "image": "",
+        "description": "Grilled chicken marinated in spices and citrus juices, mixed with onions and tomatoes, a refreshing Nepali dish.",
+        "price": "Rs. 250"
+    }
+]

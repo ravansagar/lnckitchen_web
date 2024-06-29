@@ -1,0 +1,486 @@
+* {
+    box-sizing: border-box;
+}
+.menuContainer {
+    padding: 20px;
+}
+
+.menuContainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    width: 22%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    vertical-align: top;
+}
+
+.category.expanded {
+    cursor: none;
+    width: 100%;
+    margin-right: 100px;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 20vh; 
+    overflow: hidden;
+    border-radius: 10px;
+    transition: height 0.3s ease;
+}
+
+.category.expanded .imageContainer {
+    height: 5rem; 
+}
+
+.imageContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: height 0.3s ease;
+}
+
+.category.expanded .imageContainer img {
+    height: 5rem;
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.categoryLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    z-index: 1; 
+}
+
+.menuItemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.menuItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 380px;
+    width: 100%;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+    cursor: auto;
+    z-index: 1000;
+}
+
+.category.expanded:not(:hover) {
+    transform: none;
+}
+
+.category.expanded .imageContainer {
+    cursor: pointer; 
+}
+
+.expanded {
+    height: 100%;
+    padding-left: 0px;
+}
+
+.expanded > .imageContainer {
+    width: 95vw;
+    height: 10vh;
+    padding-bottom: 0px;
+}
+
+.expanded > .imageContainer > .food-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.imageWrapper {
+    position: relative;
+    height: 200px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.imageWrapper:hover .overlay {
+    opacity: 1;
+}
+
+.responsiveLabel {
+    font-size: calc(0.8em + 0.5vw);
+    font-weight: bold;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.category.expanded {
+    cursor: none;
+    width: 90vw;
+    margin-left: 100px;
+}
+.category.expanded  .categoryLabel {
+    padding-bottom: 50px;
+}
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: height 0.3s ease;
+}
+
+.category.expanded .imageContainer {
+    height: 5rem; 
+    width: 90vw;
+}
+
+@media (max-width: 1200px) {
+    .btn {
+    font-size: small;
+    padding: -10px;
+    }
+    .btn > .btn1 {
+    padding: -10px;
+    }
+    .category {
+    width: 30%;
+    margin-top: 2rem;
+    }
+    }
+    
+    @media (max-width: 992px) {
+    .category {
+    width: 45%;
+    }
+    .category.expanded {
+        cursor: none;
+        width: 100%;
+        margin-right: 0px;
+    }
+    .category.expanded .imageContainer {
+        height: 5rem;
+        width: 90vw; 
+        margin-left: -10px;
+    }
+    }
+    
+    @media (max-width: 768px) {
+    .category {
+    width: 100%;
+    margin: 1rem 0;
+    }
+    .menuItem {
+    width: 90%;
+    }
+    .category.expanded {
+        cursor: none;
+        width: 100%;
+        margin-right: 0px;
+    }
+    .category.expanded .imageContainer {
+        height: 5rem;
+        width: 90vw; 
+        margin-left: -10px;
+    }
+    }
+    
+    @media (max-width: 576px) {
+    .menuItem {
+    width: 100%;
+    }
+    .category.expanded {
+        cursor: none;
+        width: 100%;
+        margin-right: 0px;
+    }
+    .category.expanded .imageContainer {
+        height: 5rem;
+        width: 90vw; 
+        margin-left: -10px;
+    }
+    }
+
+/* 
+* {
+    box-sizing: border-box;
+}
+
+.menuContainer {
+    padding: 20px;
+}
+
+.menuContainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    width: 22%;
+    transition: transform 0.3s ease;
+    vertical-align: top;
+}
+
+.category.expanded {
+    cursor: none;
+    width: 90vw;
+}
+.category.expanded  .categoryLabel {
+    padding-bottom: 50px;
+}
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: height 0.3s ease;
+}
+
+.category.expanded .imageContainer {
+    height: 5rem; 
+    width: 90vw;
+}
+
+.imageContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: height 0.3s ease;
+}
+
+.category.expanded .imageContainer img {
+    height: 5rem;
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+}
+
+.categoryLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    z-index: 1; 
+}
+
+.menuItemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.menuItem {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    min-height: 380px;
+    width: 100%;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+    cursor: auto;
+    z-index: 1000;
+    }
+    
+    .category.expanded{
+    transform: none;
+    }
+    
+    .category.expanded .imageContainer {
+    cursor: pointer;
+    }
+    
+    .expanded {
+    height: 100%;
+    padding-left: 0px;
+    }
+    
+    .expanded > .imageContainer {
+    width: 95vw;
+    height: 10vh;
+    padding-bottom: 0px;
+    }
+    
+    .expanded > .imageContainer > .food-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+    }
+    
+    .imageWrapper {
+    position: relative;
+    height: 200px;
+    }
+    
+    .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+    
+    .imageWrapper
+    .overlay {
+    opacity: 1;
+    }
+    
+    .responsiveLabel {
+    font-size: calc(0.8em + 0.5vw);
+    font-weight: bold;
+    }
+    
+    .btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    }
+    
+    @media (max-width: 1200px) {
+    .btn {
+    font-size: small;
+    padding: -10px;
+    }
+    .btn > .btn1 {
+    padding: -10px;
+    }
+    .category {
+    width: 30%;
+    margin-top: 2rem;
+    }
+    }
+    
+    @media (max-width: 992px) {
+    .category {
+    width: 45%;
+    }
+    .category.expanded {
+        cursor: none;
+        width: 100%;
+        margin-right: 0px;
+    }
+    .category.expanded .imageContainer {
+        height: 5rem;
+        width: 90vw; 
+        margin-left: -10px;
+    }
+    }
+    
+    @media (max-width: 768px) {
+    .category {
+    width: 100%;
+    margin: 1rem 0;
+    }
+    .menuItem {
+    width: 90%;
+    }
+    .category.expanded {
+        cursor: none;
+        width: 100%;
+        margin-right: 0px;
+    }
+    .category.expanded .imageContainer {
+        height: 5rem;
+        width: 90vw; 
+        margin-left: -10px;
+    }
+    }
+    
+    @media (max-width: 576px) {
+    .menuItem {
+    width: 100%;
+    }
+    .category.expanded {
+        cursor: none;
+        width: 100%;
+        margin-right: 0px;
+    }
+    .category.expanded .imageContainer {
+        height: 5rem;
+        width: 90vw; 
+        margin-left: -10px;
+    }
+    } */

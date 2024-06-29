@@ -1,0 +1,15 @@
+*{
+  max-width: 100vw;
+}
+body.light {
+  background-color: white;
+  color: black;
+}
+body.dark {
+  background-color: black;
+  color: white;
+}
+.food-container {
+  background-color: inherit;
+  color: inherit;
+}
