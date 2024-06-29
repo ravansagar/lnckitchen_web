@@ -442,7 +442,7 @@ import {
     Logout as LogOutIcon,
     LightModeOutlined,
     DarkModeOutlined,
-    ShoppingCart as ShoppingCartIcon, // Add cart icon
+    ShoppingCart as ShoppingCartIcon,
 } from "@mui/icons-material";
 import { Link, NavLink } from "react-router-dom";
 import logo from "assets/logo.png";
@@ -571,10 +571,10 @@ const NavBar = () => {
                                             navigate("/profile");
                                         }}
                                     >
-                                        {user.photoURL || user.avatar ? (
+                                        {user.avatar || user.photoURL  ? (
                                             <Avatar
                                                 src={
-                                                    user.photoURL || user.avatar
+                                                    user.avatar || user.photoURL 
                                                 }
                                                 alt="User"
                                                 sx={{
