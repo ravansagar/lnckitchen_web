@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'eact';
+import { useState, useEffect } from 'react';
 import { get, ref } from 'firebase/database';
 import { database } from 'components/LoginSignUp/firebaseConfig';
 
@@ -56,12 +56,14 @@ const useFetchRandomFoods = (user) => {
 
                         const allDescriptions = [...new Set([...cartDescriptions,...orderDescriptions])];
                         const keywords = allDescriptions.reduce((acc, desc) => {
-                            const words = desc.split(' ');
-                            words.forEach(word => {
-                                if (!acc.includes(word.toLowerCase())) {
-                                    acc.push(word.toLowerCase());
-                                }
-                            });
+                            if (desc) {
+                                const words = desc.split(' ');
+                                words.forEach(word => {
+                                    if (!acc.includes(word.toLowerCase())) {
+                                        acc.push(word.toLowerCase());
+                                    }
+                                });
+                            }
                             return acc;
                         }, []);
 

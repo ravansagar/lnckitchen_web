@@ -63,13 +63,16 @@ import OrderPopup from "components/HandleOrder/OrderPopUpContext";
 import CartItems from "./cartItems";
 import usePastOrders from "./pastOrders";
 
+
 const UserProfile = ({ user }) => {
-  const [editMode, setEditMode] = useState({
+  const searchParams = new URLSearchParams(window.location.search);
+console.log();
+  const [tabValue, setTabValue] = useState(searchParams.get('tab') ? parseInt(searchParams.get('tab')) : 0);
+    const [editMode, setEditMode] = useState({
     name: false,
     phone: false,
     address: false,
   });
-  const [tabValue, setTabValue] = useState(0);
   const [userData, setUserData] = useState({
     fullName: "",
     email: "",
@@ -115,7 +118,7 @@ const UserProfile = ({ user }) => {
         email: user.email || "",
         phone: user.phone || "Set Phone Number",
         address: user.address || "Set Address",
-        avatar: user.photoURL || user.avatar || null,
+        avatar: user.avatar || user.photoURL || null,
       });
       setTempData({
         name: user.displayName || user.fullName || "",
@@ -354,6 +357,7 @@ const UserProfile = ({ user }) => {
         >
           <Tab label="Details" />
           <Tab label="Cart Items" />
+          <Tab label="Pending Orders" />
           <Tab label="Past Orders" />
         </Tabs>
         {tabValue === 0 && (
@@ -607,7 +611,7 @@ const UserProfile = ({ user }) => {
         {tabValue === 2 && (
           <Box p={3}>
             <Typography variant="h6" gutterBottom>
-              Past Orders
+              Pending Orders
             </Typography>
             <TableContainer component={Paper}>
               <Table>

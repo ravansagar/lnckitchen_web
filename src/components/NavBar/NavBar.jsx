@@ -661,7 +661,7 @@ const NavBar = () => {
                                 color="inherit"
                                 aria-label="toggle dark mode"
                                 onClick={toggleTheme}
-                                sx={{ marginLeft: 2, marginRight: 4 }}
+                                sx={{ marginLeft: 0, marginRight: 2 }}
                             >
                                 {theme === "dark" ? (
                                     <LightModeOutlined
@@ -683,7 +683,9 @@ const NavBar = () => {
                                 edge="end"
                                 color="inherit"
                                 aria-label="cart"
-                                sx={{ marginLeft: 2, marginRight: 4 }}
+                                sx={{ marginLeft: 0, marginRight: 2 }}
+                                component={Link} 
+                                to={`/profile?tab=1`}
                             >
                                 <ShoppingCartIcon
                                     style={{

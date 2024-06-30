@@ -377,17 +377,26 @@ const Menu = ({ user }) => {
             </Grid>
           ) : (
             Object.keys(categories).map((category) => (
+              // <div
+              //   key={category}
+              //   ref={(el) => (categoryRefs.current[category] = el)}
+              //   className={`category ${
+              //     expandedCategory === category ? "expanded" : ""
+              //   }`}
+              //   onClick={(e) => {
+              //     handleCategoryClick(category);
+              //     e.stopPropagation();
+              //   }}
+              // >
               <div
-                key={category}
-                ref={(el) => (categoryRefs.current[category] = el)}
-                className={`category ${
-                  expandedCategory === category ? "expanded" : ""
-                }`}
-                onClick={(e) => {
-                  handleCategoryClick(category);
-                  e.stopPropagation();
-                }}
-              >
+  key={category}
+  ref={(el) => (categoryRefs.current[category] = el)}
+  className={`category ${expandedCategory === category ? "expanded" : ""}`}
+  onClick={(e) => {
+    handleCategoryClick(category);
+    e.stopPropagation();
+  }}
+>
                 <div className="imageContainer">
                   <img
                     src={categories[category].image}
