@@ -20,7 +20,10 @@ const ESewaPayment = ({food, total, delivery}) => {
         signature: '',
         secret: import.meta.env.VITE_ESEWA_SECRET_KEY
     });
-
+    console.log(formData.amount);
+    console.log(formData.transaction_uuid);
+    console.log(formData.product_code);
+    console.log(formData.secret);
     useEffect(() => {
         generateSignature();
     }, [formData.amount, formData.transaction_uuid, formData.product_code, formData.secret]);
