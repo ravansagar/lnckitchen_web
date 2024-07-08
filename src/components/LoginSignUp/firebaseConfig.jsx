@@ -5,13 +5,13 @@ import { getDatabase } from "firebase/database";
 import { getMessaging } from "firebase/messaging";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAyA73k-WoGcOe6V2HUG3IibF3672tDFpA",
-    authDomain: "lnckitchen-brt.firebaseapp.com",
-    projectId: "lnckitchen-brt",
-    storageBucket: "lnckitchen-brt.appspot.com",
-    messagingSenderId: "656428632077",
-    appId: "1:656428632077:web:e9d0f8c5459b005cd6ad44",
-    measurementId: "G-1N9WZVD5NW",
+    apiKey: import.meta.env.FIREBASE_API_KEY,
+    authDomain: import.meta.env.FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.FIREBASE_APP_ID,
+    measurementId: import.meta.env.FIREBASE_MEASURMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
