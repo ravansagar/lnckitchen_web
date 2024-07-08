@@ -7,7 +7,7 @@ const useFetchRandomFoods = (user) => {
     const [dataLoaded, setDataLoaded] = useState(false);
     const [cartFoods, setCartFoods] = useState([]);
     const [orderFoods, setOrderFoods] = useState([]);
-  
+
     useEffect(() => {
         let isMounted = true;
 
@@ -21,22 +21,23 @@ const useFetchRandomFoods = (user) => {
                 const dishesRef = ref(database, 'Dishes');
                 const snapshot = await get(dishesRef);
 
-                if (user) {
-                    const descCartsRef = ref(database, `carts/${user.uid}`);
-                    const snapshot2 = await get(descCartsRef);
+                if (snapshot.exists()) {
+                    const allDishes = snapshot.val();
+                    const allFoods = Object.keys(allDishes).reduce((acc, category) => [
+                        ...acc,
+                        ...allDishes[category].items,
+                    ], []);
 
-                    const descOrdersRef = ref(database, `transactions/${user.uid}`);
-                    const snapshot3 = await get(descOrdersRef);
+                    let keywords = [];
+                    let cartDescriptions = [];
+                    let orderDescriptions = [];
 
-                    if (snapshot.exists()) {
-                        const allDishes = snapshot.val();
-                        const allFoods = Object.keys(allDishes).reduce((acc, category) => [
-                           ...acc,
-                           ...allDishes[category].items,
-                        ], []);
+                    if (user) {
+                        const descCartsRef = ref(database, `carts/${user.uid}`);
+                        const snapshot2 = await get(descCartsRef);
 
-                        let cartDescriptions = [];
-                        let orderDescriptions = [];
+                        const descOrdersRef = ref(database, `transactions/${user.uid}`);
+                        const snapshot3 = await get(descOrdersRef);
 
                         if (snapshot2.exists()) {
                             const cartData = snapshot2.val();
@@ -54,8 +55,7 @@ const useFetchRandomFoods = (user) => {
                             }
                         }
 
-                        const allDescriptions = [...new Set([...cartDescriptions,...orderDescriptions])];
-                        const keywords = allDescriptions.reduce((acc, desc) => {
+                        keywords = [...new Set([...cartDescriptions, ...orderDescriptions])].reduce((acc, desc) => {
                             if (desc) {
                                 const words = desc.split(' ');
                                 words.forEach(word => {
@@ -66,60 +66,37 @@ const useFetchRandomFoods = (user) => {
                             }
                             return acc;
                         }, []);
+                    }
 
-                        const matchingFoods = allFoods.filter(food =>
-                            keywords.some(keyword => food.description.toLowerCase().includes(keyword))
-                        );
+                    const matchingFoods = allFoods.filter(food =>
+                        keywords.some(keyword => food.description.toLowerCase().includes(keyword))
+                    );
 
-                        const randomSelectedFoods = [];
-                        const randomIndexes = [];
-                        while (randomSelectedFoods.length < 8 && matchingFoods.length > randomSelectedFoods.length) {
-                            const randomIndex = Math.floor(Math.random() * matchingFoods.length);
-                            if (!randomIndexes.includes(randomIndex)) {
-                                randomIndexes.push(randomIndex);
-                                randomSelectedFoods.push(matchingFoods[randomIndex]);
+                    const randomSelectedFoods = [];
+                    const randomIndexes = [];
+                    while (randomSelectedFoods.length < 8 && matchingFoods.length > randomSelectedFoods.length) {
+                        const randomIndex = Math.floor(Math.random() * matchingFoods.length);
+                        if (!randomIndexes.includes(randomIndex)) {
+                            randomIndexes.push(randomIndex);
+                            randomSelectedFoods.push(matchingFoods[randomIndex]);
+                        }
+                    }
+                    if (randomSelectedFoods.length < 8) {
+                        const remainingFoods = allFoods.filter(food => !randomSelectedFoods.includes(food));
+                        while (randomSelectedFoods.length < 8) {
+                            const randomIndex = Math.floor(Math.random() * remainingFoods.length);
+                            if (!randomSelectedFoods.includes(remainingFoods[randomIndex])) {
+                                randomSelectedFoods.push(remainingFoods[randomIndex]);
                             }
                         }
-                        if (randomSelectedFoods.length < 8) {
-                            const remainingFoods = allFoods.filter(food =>!randomSelectedFoods.includes(food));
-                            while (randomSelectedFoods.length < 8) {
-                                const randomIndex = Math.floor(Math.random() * remainingFoods.length);
-                                if (!randomSelectedFoods.includes(remainingFoods[randomIndex])) {
-                                    randomSelectedFoods.push(remainingFoods[randomIndex]);
-                                }
-                            }
-                        }
-                      
-                        if (isMounted) {
-                            setRandomFoods(randomSelectedFoods);
-                            setDataLoaded(true);
-                        }
-                    } else {
-                        console.log('No data available');
+                    }
+
+                    if (isMounted) {
+                        setRandomFoods(randomSelectedFoods);
+                        setDataLoaded(true);
                     }
                 } else {
-                    if (snapshot.exists()) {
-                        const allDishes = snapshot.val();
-                        const allFoods = Object.keys(allDishes).reduce((acc, category) => [
-                           ...acc,
-                           ...allDishes[category].items,
-                        ], []);
-
-                        const randomSelectedFoods = [];
-                        while (randomSelectedFoods.length < 8) {
-                            const randomIndex = Math.floor(Math.random() * allFoods.length);
-                            if (!randomSelectedFoods.includes(allFoods[randomIndex])) {
-                                randomSelectedFoods.push(allFoods[randomIndex]);
-                            }
-                        }
-
-                        if (isMounted) {
-                            setRandomFoods(randomSelectedFoods);
-                            setDataLoaded(true);
-                        }
-                    } else {
-                        console.log('No data available');
-                    }
+                    console.log('No data available');
                 }
             } catch (error) {
                 console.error('Error fetching data:', error);
