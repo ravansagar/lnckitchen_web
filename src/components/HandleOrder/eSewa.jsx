@@ -69,7 +69,7 @@ const ESewaPayment = ({food, total, delivery}) => {
           backgroundColor: '#45a049',
         };
     return (
-        <form action="https://epay.esewa.com.np/api/epay/main/v2/form" method="POST" target="_blank">
+        <form action={import.meta.env.VITE_ESEWA_API_URL} method="POST" target="_blank">
             <input type="hidden" id="amount" name="amount" value={formData.amount} />
             <input type="hidden" id="tax_amount" name="tax_amount" value={formData.tax_amount} />
             <input type="hidden" id="total_amount" name="total_amount" value={formData.total_amount} />
