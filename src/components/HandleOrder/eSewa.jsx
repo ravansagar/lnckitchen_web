@@ -35,6 +35,9 @@ const ESewaPayment = ({food, total, delivery}) => {
         }));
 
         const { total_amount, transaction_uuid, product_code, secret } = formData;
+        if(!total_amount || !transaction_uuid || !product_code || !secret){
+            return;
+        }
         const hash = CryptoJS.HmacSHA256(
             `total_amount=${total_amount},transaction_uuid=${transaction_uuid},product_code=${product_code}`,
             secret
