@@ -236,8 +236,7 @@ const ReviewPopup = ({ open, onClose, food, totalPrice, deliveryCharge }) => {
                         </Typography>
                         <Divider />
                         <Typography sx={{ spacing: 1 }}>Pay Via</Typography>
-                        <PayViaEsewa label={food.label} description={food.description} totalPrice={totalPrice} deliveryCharge={deliveryCharge} user={user} />
-                        <PayViaKhalti label={food.label} description={food.description} totalPrice={totalPrice} deliveryCharge={deliveryCharge} user={user} />
+                        <PayViaEsewa food={food} total={totalPrice} delivery={deliveryCharge} />                         <PayViaKhalti label={food.label} description={food.description} totalPrice={totalPrice} deliveryCharge={deliveryCharge} user={user} />
                     </Stack>
                 ) : (
                     <Button onClick={() => navigate('/login')}>
