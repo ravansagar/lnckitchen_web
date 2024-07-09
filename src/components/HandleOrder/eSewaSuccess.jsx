@@ -82,7 +82,7 @@ const ESewaSuccessFrom = ({ user }) => {
   }, [payload, user, navigate, saveTransactionToFirebase]);
 
   return (
-    <div className="loader-container">
+    <div className="loader-container" style={{marginTop: '-100px'}}>
       <div className="loader"></div>
       <h2>Loading...</h2>
     </div>
