@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTransaction } from 'components/Contexts/TransactionContext';
 import { ref, get, update } from "firebase/database";
-import { database } from 'components/Contexts/firebaseConfig';
+import { database } from 'components/LoginSignUp/firebaseConfig';
 import './loader.css';
 
 const ESewaSuccessFrom = ({ user }) => {
