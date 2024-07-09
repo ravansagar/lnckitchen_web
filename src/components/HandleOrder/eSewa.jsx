@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import CryptoJS from 'crypto-js';
 import { v4 } from 'uuid';
+import { useTransaction } from 'components/Contexts/TransactionContext';
+import SaveTransaction from './saveTransaction';
 import eSewaIcon from 'assets/esewa.svg'; 
 
-const ESewaPayment = ({food, total, delivery}) => {
+const PayViaEsewa = ({food, total, delivery, user}) => {
     const [transactionUuid, setTransactionUuid] = useState(v4());
-    console.log(import.meta.env.VITE_ESEWA_SECRET_KEY);
+    const { saveTransactionToFirebase } = useTransaction();
     const [formData, setFormData] = useState({
         amount: parseInt(food.price.slice(4)),
         tax_amount: '0',
@@ -20,6 +22,7 @@ const ESewaPayment = ({food, total, delivery}) => {
         signature: '',
         secret: import.meta.env.VITE_ESEWA_SECRET_KEY
     });
+
     useEffect(() => {
         generateSignature();
     }, [formData.amount, formData.transaction_uuid, formData.product_code, formData.secret]);
@@ -47,6 +50,27 @@ const ESewaPayment = ({food, total, delivery}) => {
             signature: hashInBase64
         }));
     };
+
+    const saveFoodData = async () => {
+        if(!user) {
+          return;
+        }
+        try {
+            await SaveTransaction({
+              user: user,
+              food: food,
+              method: 'ESEWA',
+              totalPrice: formData.total_amount,
+              transactionUuid: formData.transaction_uuid,
+              status: "PENDING",
+              saveTransactionToFirebase,
+            });
+          } catch (error) {
+            console.error('Error saving transaction:', error);
+          }
+          return;
+      };
+    
     const buttonStyle = {
           display: 'inline-flex',
           alignItems: 'center',
@@ -71,7 +95,7 @@ const ESewaPayment = ({food, total, delivery}) => {
           backgroundColor: '#45a049',
         };
     return (
-        <form action={import.meta.env.VITE_ESEWA_API_URL} method="POST" target="_blank">
+        <form action={import.meta.env.VITE_ESEWA_API_URL} method="POST" target="_blank"  onSubmit={saveFoodData} >
             <input type="hidden" id="amount" name="amount" value={formData.amount} />
             <input type="hidden" id="tax_amount" name="tax_amount" value={formData.tax_amount} />
             <input type="hidden" id="total_amount" name="total_amount" value={formData.total_amount} />
@@ -97,4 +121,4 @@ const ESewaPayment = ({food, total, delivery}) => {
     );
 };
 
-export default ESewaPayment;
+export default PayViaEsewa;

@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from "react";
 import { set, ref } from "firebase/database";
-import { database } from "components/LoginSignUp/firebaseConfig"; // Adjust the import path as needed
+import { database } from "components/LoginSignUp/firebaseConfig"; 
 
 const TransactionContext = createContext();
 

@@ -112,7 +112,7 @@ const ReviewPopup = ({ open, onClose, food, totalPrice, deliveryCharge }) => {
                         </Typography>
                         <Divider />
                         <Typography sx={{ spacing: 1 }}>Pay Via</Typography>
-                        <PayViaEsewa food={food} total={totalPrice} delivery={deliveryCharge} /> 
+                        <PayViaEsewa food={food} total={totalPrice} delivery={deliveryCharge} user={user} /> 
                         <PayViaKhalti food={food} total={totalPrice+deliveryCharge} />
                     </Stack>
                 ) : (

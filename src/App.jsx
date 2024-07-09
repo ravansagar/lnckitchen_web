@@ -24,6 +24,8 @@ import ScrollToTopButton from "components/Contexts/ScrollToTop";
 import { AlertProvider } from 'components/Contexts/AlertContext';
 import { KhaltiPaymentProvider } from "components/Contexts/KhaltiPaymentContext";
 import { TransactionProvider } from "components/Contexts/TransactionContext";
+import ESewaSuccessFrom from "components/HandleOrder/eSewaSuccess";
+
 const categoryImages = {
     veg: "./images/chilliPaneer.jpeg",
     nonVeg: "./images/manchurian.jpeg",
@@ -47,12 +49,12 @@ function AppContent() {
     const LoginPage = location.pathname === "/login";
     const SignUpPage = location.pathname === "/signup";
     const UserProfile = location.pathname === "/profile";
-    const temp = location.pathname === "/temp";
+    const success = location.pathname === "/success";
 
     return (
         <MuiThemeProvider theme={muiTheme}>
             <div style={{ marginTop: "100px" }}>
-                {!(LoginPage || SignUpPage || UserProfile || temp) && <NavBar />}
+                {!(LoginPage || SignUpPage || UserProfile || success) && <NavBar />}
 
                 <TransitionGroup>
                     <CSSTransition
@@ -93,6 +95,7 @@ function AppContent() {
                                 />
                                 <Route path="/login" element={<SignIn />} />
                                 <Route path="/signup" element={<SignUpForm prvMode={theme} />} />
+                                <Route path="/success" element={<ESewaSuccessFrom  user={user}/>} />
                             </Routes>
                             <ScrollToTopButton />
                         </div>
