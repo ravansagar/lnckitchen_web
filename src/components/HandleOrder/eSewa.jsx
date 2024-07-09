@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CryptoJS from 'crypto-js';
 import { v4 } from 'uuid';
 import { useTransaction } from 'components/Contexts/TransactionContext';
-import SaveTransaction from './saveTransaction';
+import SaveTransaction from './SaveTransaction';
 import eSewaIcon from 'assets/esewa.svg'; 
 
 const PayViaEsewa = ({food, total, delivery, user}) => {
