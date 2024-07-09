@@ -24,7 +24,7 @@ import ScrollToTopButton from "components/Contexts/ScrollToTop";
 import { AlertProvider } from 'components/Contexts/AlertContext';
 import { KhaltiPaymentProvider } from "components/Contexts/KhaltiPaymentContext";
 import { TransactionProvider } from "components/Contexts/TransactionContext";
-import ESewaSuccessFrom from "components/HandleOrder/eSewaSuccess";
+import ESewaSuccessFromURL from "components/HandleOrder/eSewaSuccess";
 
 const categoryImages = {
     veg: "./images/chilliPaneer.jpeg",
@@ -95,7 +95,7 @@ function AppContent() {
                                 />
                                 <Route path="/login" element={<SignIn />} />
                                 <Route path="/signup" element={<SignUpForm prvMode={theme} />} />
-                                <Route path="/success" element={<ESewaSuccessFrom  user={user}/>} />
+                                <Route path="/success" element={<ESewaSuccessFromURL  user={user}/>} />
                             </Routes>
                             <ScrollToTopButton />
                         </div>
