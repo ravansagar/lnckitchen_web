@@ -1,8 +1,12 @@
 {
-    "rewrites": [
-      { "source": "/success",
-        "destination": "/success" 
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "App.jsx",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/success", "dest": "/App.jsx" }
+  ]
+}
